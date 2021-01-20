@@ -19,6 +19,12 @@ function collider.new(_x, _y, _min_x, _min_y, _max_x, _max_y, _layer_mask)
   return _c
 end
 
+function collider:center()
+  local _x = self.x + self.min_x + (self.max_x - self.min_x) * 0.5
+  local _y = self.y + self.min_y + (self.max_y - self.min_y) * 0.5
+  return _x, _y
+end
+
 function collider:min(_x, _y)
   _x = _x or self.x
   _y = _y or self.y

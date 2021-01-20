@@ -13,6 +13,11 @@ function vec2.new(_x, _y)
   return _v
 end
 
+function vec2:set(_x, _y)
+  self.x = _x
+  self.y = _y
+end
+
 function vec2:add(_v)
   return vec2.new(self.x + _v.x, self.y + _v.y)
 end
